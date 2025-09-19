@@ -45,3 +45,9 @@ REST_FRAMEWORK = {
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY','sk_test_xxx')
 STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY','pk_test_xxx')
 PUBLIC_BASE_URL = os.environ.get('PUBLIC_BASE_URL','http://localhost:8000')
+
+
+# PayPal configuration
+PAYPAL_CLIENT_ID = os.environ.get('PAYPAL_CLIENT_ID','')
+PAYPAL_SECRET = os.environ.get('PAYPAL_SECRET','')
+PAYPAL_API_BASE = os.environ.get('PAYPAL_API_BASE','https://api-m.sandbox.paypal.com')

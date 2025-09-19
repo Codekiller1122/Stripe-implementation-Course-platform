@@ -48,3 +48,8 @@ If you want, I can:
 - Buttons in the dashboard to create SetupIntent, open Customer Portal, and start Connect onboarding.
 
 Note: This is a starter integration. In production you must persist customer IDs, account IDs, and securely handle webhooks with STRIPE_WEBHOOK_SECRET.
+
+
+## PayPal Integration Added
+
+This project now supports PayPal alongside Stripe: one-time course purchases and subscriptions via PayPal Orders/Subscriptions APIs, webhooks, and payouts. Configure PAYPAL_CLIENT_ID and PAYPAL_SECRET in backend/.env.example.

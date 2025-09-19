@@ -17,7 +17,7 @@ export default function Dashboard(){
   }
   return (<div>
     <h2>Courses</h2>
-    <table border='1' cellPadding='8'><thead><tr><th>Title</th><th>Instructor</th><th>Price</th><th>Action</th></tr></thead><tbody>{courses.map(c=>(<tr key={c.id}><td>{c.title}</td><td>{c.instructor_name}</td><td>${(c.price_cents/100).toFixed(2)}</td><td>{c.price_cents>0? <button onClick={()=>buy(c)}>Buy</button> : 'Free'}</td></tr>))}</tbody></table>
+    <table border='1' cellPadding='8'><thead><tr><th>Title</th><th>Instructor</th><th>Price</th><th>Action</th></tr></thead><tbody>{courses.map(c=>(<tr key={c.id}><td>{c.title}</td><td>{c.instructor_name}</td><td>${(c.price_cents/100).toFixed(2)}</td><td>{c.price_cents>0? <><button onClick={()=>buy(c)}>Buy</button> <button onClick={()=>paypalDonate(c)}>PayPal</button> <button onClick={()=>paypalSubscribe(c)}>PayPal Sub</button></> : 'Free'}</td></tr>))}</tbody></table>
     <p>Tip: This demo uses Stripe Checkout for payments. For subscriptions, use the subscription flow.</p>
   </div>);
 }

@@ -3,3 +3,4 @@ djangorestframework
 stripe
 python-dotenv
 gunicorn
+stripe
